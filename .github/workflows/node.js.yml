@@ -18,6 +18,10 @@ jobs:
         run: |
           npm ci
           npm run build --if-present
+      - uses: actions/upload-artifact@main
+        with:
+          name: webpack artifacs
+          path: public/
 
   test:
     runs-on: ubuntu-latest
